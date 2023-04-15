@@ -43,7 +43,7 @@ h1:hover {
   background: rgba(0, 0, 0, 0.5);
   color: white;
   border-radius: var(--border-radius);
-  padding: 20px;
+  padding: 10px 20px;
   margin: 10px;
 }
 
@@ -108,15 +108,19 @@ a:active {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   max-width: 95%;
   width: 500px;
-  animation: modalopen 1s;
+  animation: modalopen ease-in-out 0.5s;
 }
 
 @keyframes modalopen {
-  from {
+  0% {
     opacity: 0;
   }
 
-  to {
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
     opacity: 1;
   }
 }
@@ -143,6 +147,7 @@ h3 {
 
 .modal-content {
   padding: 20px;
+  max-width: 100%;
   background: rgba(211, 211, 211, 0.623);
 }
 
@@ -188,5 +193,28 @@ button:focus {
 @media screen and (max-width: 800px) {
   .container {
     flex-direction: column;
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  .item {
+    width: 85%;
+    margin: 10px auto;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  h1 {
+    width: 70%;
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+
+  .form-input {
+    width: 80%;
   }
 }
